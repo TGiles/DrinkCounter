@@ -1,7 +1,7 @@
 var username;
-
-document.getElementById("main").onclick=function(){
-document.getElementById("main").innerHTML = "Click me to increment";
+var display_name;
+document.getElementById("registerSubmit").onclick=function(){
+//document.getElementById("main").innerHTML = "Click me to increment";
 username = document.getElementById("username").value;
 document.getElementById("username").disabled = true;
 var xmlhttp;

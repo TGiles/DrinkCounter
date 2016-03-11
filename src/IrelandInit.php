@@ -4,7 +4,7 @@ $username = "normal_user";
 $password = "";
 $dbname = "ireland";
 $q = $_GET["q"];
-
+$d = $_GET["d"];
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
@@ -15,7 +15,7 @@ $result = mysqli_query($conn, "SELECT Username FROM users_drink WHERE Username =
 if(mysqli_num_rows($result)==0)
 {	
 	$sql = "INSERT INTO users_drink (Username, Display_Name)
-	VALUES ('".$q."','".$q."')";
+	VALUES ('".$q."','".$d."')";
 	$result = mysqli_query($conn, $sql);
 	if($result)
 	{
